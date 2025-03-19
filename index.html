@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book World</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <style type="text/css">
+    
+    section{
+      background-image: linear-gradient(to right, black, rgb(59, 62, 77));
+    }
+    .card-container{
+      perspective: 1000px;
+    }
+    .part{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 75vh;
+    }
+    .card1{
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 2px 2px 10px gray;
+      height: 80%;
+      width: 70%;
+      transform-style: preserve-3d;
+      transition: 1s;
+    }
+    .card-front, .card-back{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+    }
+    .card-front{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(0deg);
+    }
+    .card-back{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(to bottom right, #221738, #3c7055);
+      color: white;
+      transform: rotateY(180deg);
+    }
+    .card1:hover{
+      transform: rotateY(180deg);
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .toptext p{
+        font-size: 50px;
+    }
+    .feedback1{
+        width: 60%;
+    }
+    .light-theme{
+      background-image: linear-gradient(to right, rgb(240, 245, 253), rgb(247, 245, 255));
+    }
+
+    @media screen and (orientation = portrait) {
+      .card-container{
+        display: block;
+      }
+      .part{
+        height: 65vh;
+      }
+      .toptext p{
+        font-size: 25px;
+      }
+      .feedback1{
+        width: 90%;
+      }
+    }
+  </style>
+
+</head>
+<body class="container-fluid bg-dark">
+
+  <header class="bg-dark text-light w-100 p-2 d-flex justify-content-between">
+    <span>
+      <h3 class="ps-4 bi bi-book text-warning"> Book <span class="text-info">Showcase</span></h3>
+    </span>
+    <span class="d-flex">
+      <span class="pe-2 bi bi-moon-stars"></span>
+      <span class="form-switch">
+        <input type="checkbox" class="form-check-input" onchange="themefn()" id="theme">
+      </span>
+      <span class="pe-2 bi bi-brightness-high-fill"></span>
+    </span>
+  </header>
+
+
+  <section id="bookbody">
+    
+    <div class="pt-lg-5 pb-lg-5 toptext">
+      <p class="text-center text-secondary" id="light-text">Welcome to Book World</p>
+      <p class="text-center text-warning" id="light-text">
+        Find your Imaginary character
+      </p>
+    </div>
+        
+
+    <div class="card-container row pt-lg-5">
+      <div class="part col">
+        <div class="card1">
+          <div class="card-front rounded-2">
+            <img src="public/images/book-1.jpeg" alt="" class="rounded-1">
+          </div>
+          <div class="card-back rounded-1">
+            <a href="project-1-p2-book1.html" class="text-light" style="text-decoration: none; height: 100%; display: flex; align-items: center; justify-content: center;">Click to Open</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="part col">
+        <div class="card1">
+          <div class="card-front rounded-2">
+            <img src="public/images/book-2.jpg" alt="" class="rounded-1">
+          </div>
+          <div class="card-back rounded-1">
+            <a href="project-1-p2-book2.html" class="text-light" style="text-decoration: none; height: 100%; display: flex; align-items: center; justify-content: center;">Click to Open</a>
+          </div>
+        </div>
+      </div>
+
+
+    
+      <div class="part col">
+        <div class="card1">
+          <div class="card-front rounded-2">
+            <img src="public/images/book-3.jpg" alt="" class="rounded-1">
+          </div>
+          <div class="card-back rounded-1">
+            <a href="project-1-p2-book3.html" class="text-light" style="text-decoration: none; height: 100%; display: flex; align-items: center; justify-content: center;">Click to Open</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card-container row mt-5">
+      <div class="part col">
+        <div class="card1">
+          <div class="card-front rounded-2">
+            <img src="public/images/book-4.jpg" alt="" class="rounded-1">
+          </div>
+          <div class="card-back rounded-1"> 
+            <a href="project-1-p2-book4.html" class="text-light" style="text-decoration: none; height: 100%; display: flex; align-items: center; justify-content: center;">Click to Open</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="part col">
+        <div class="card1">
+          <div class="card-front rounded-2">
+            <img src="public/images/book-5.jpg" alt="" class="rounded-1">
+          </div>
+          <div class="card-back rounded-1">
+            <a href="project-1-p2-book5.html" class="text-light" style="text-decoration: none; height: 100%; display: flex; align-items: center; justify-content: center;">Click to Open</a>
+          </div>
+        </div>
+      </div>
+
+
+    
+      <div class="part col">
+        <div class="card1">
+          <div class="card-front rounded-2">
+            <img src="public/images/book-6.jpg" alt="" class="rounded-1">
+          </div>
+          <div class="card-back rounded-1">
+            <a href="project-1-p2-book6.html" class="text-light" style="text-decoration: none; height: 100%; display: flex; align-items: center; justify-content: center;">Click to Open</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer class="bg-black pt-3">
+    <p class="p-3 text-center text-white bg-dark mb-2">All Rights Reserved</p>
+  </footer>
+
+
+
+  <script type="text/javascript">
+    function themefn() {
+      document.getElementById("bookbody").classList.toggle("light-theme");
+    }
+  </script>
+</body>
+</html>
